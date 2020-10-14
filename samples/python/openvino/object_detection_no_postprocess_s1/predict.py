@@ -90,7 +90,7 @@ class Model:
         return self._postprocess(outputs)
 
     def _postprocess(self, outputs):
-        raw_probs = outputs['raw_probs'][0][:, 1:]
+        raw_probs = outputs['raw_probs'][0]
         raw_boxes = outputs['raw_boxes'][0]
         center_xy = raw_boxes[:, :2]
         wh = raw_boxes[:, 2:]
